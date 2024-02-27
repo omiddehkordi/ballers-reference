@@ -1,0 +1,20 @@
+import scrapy
+
+class PerGameSeason(scrapy.Item):
+    name: str = scrapy.Field()
+    season: str = scrapy.Field()
+    age: str = scrapy.Field()
+    team: str = scrapy.Field()
+    league: str = scrapy.Field()
+    position: str = scrapy.Field()
+    games_played: str = scrapy.Field()
+    games_started: str = scrapy.Field()
+    minutes_played_per_game: str = scrapy.Field()
+    field_goals_per_game: str = scrapy.Field()
+    field_goals_attempted_per_game: str = scrapy.Field()
+    field_goal_percentage: str = scrapy.Field()
+    #experience: str = scrapy.Field()
+    blocks_per_game: str = scrapy.Field()
+    turnovers_per_game: str = scrapy.Field()
+    personal_fouls_per_game: str = scrapy.Field()
+    points_per_game: str = scrapy.Field()
