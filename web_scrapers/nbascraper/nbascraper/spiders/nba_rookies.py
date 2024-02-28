@@ -3,12 +3,13 @@ import string
 from nbascraper.PerGameSeason import PerGameSeason
 
 class BbalRefSpider(scrapy.Spider):
-    name = "bbal_ref"
+    name = "nba_rookies"
     allowed_domains = ["basketball-reference.com"]
     start_urls = ["https://basketball-reference.com"]
 
     def start_requests(self):
         last_name_initials = list(string.ascii_lowercase)
+        print(last_name_initials)
         base_player_url = "https://www.basketball-reference.com/players/"
         urls = [base_player_url + x + '/' for x in last_name_initials]
 
