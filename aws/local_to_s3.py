@@ -1,9 +1,7 @@
 import boto3
 
 def upload_file_to_s3(local_file_path, bucket_name, destination_path):
-    s3_client = boto3.client('s3',
-                             aws_access_key_id='AKIA4MTWNXQWENRRIDFG',
-                             aws_secret_access_key='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')
+    s3_client = boto3.client('s3')
     
     s3_client.upload_file(local_file_path, bucket_name, destination_path)
 
