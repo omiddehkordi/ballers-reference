@@ -1,10 +1,15 @@
 import pandas as pd 
 import snowflake.connector
 import os
+import json
 
 def import_snowflake():
-    snowflake_account = os.environ.get('SNOWFLAKE_ACCOUNT')
-    snowflake_password = os.environ.get('SNOWFLAKE_PASSWORD')
+    
+    with open('snowflake_config.json', 'r') as f:
+        config = json.load(f)
+
+    snowflake_account = config['snowflake_account']
+    snowflake_password = config['snowflake_password']
 
     connection = snowflake.connector.connect(
         user='omiddehkordi',
